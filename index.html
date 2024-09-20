@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo</title>
+    <link rel="shortcut icon" href="payoo.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Fontawesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/bbfc4be646.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="flex items-center justify-center h-[100vh] p-12">
+        <div
+          class="border-4 border-blue-600 py-12 rounded-3xl shadow-2xl flex flex-col justify-center items-center"
+        >
+          <div class="w-[30%] text-center">
+            <img src="payoo.png" alt="" />
+            <h1 class="font-black">Payoo</h1>
+          </div>
+          <div class="card bg-base-100 w-full max-w-sm shrink-0">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label relative">
+                  <!-- <span class="label-text">Mobile Number</span> -->
+                </label>
+                <input
+                  id="mn"
+                  type="text"
+                  placeholder="Mobile Number"
+                  class="input input-bordered"
+                  required
+                  autocomplete="on"
+                />
+                <i class="absolute top-[21%] right-12 fa-duotone fa-solid fa-phone" style="--fa-primary-color: #0040ff; --fa-secondary-color: #0040ff;"></i>
+              </div>
+              <div class="form-control">
+                <label class="label relative">
+                  <!-- <span class="label-text">4 Digit Pin</span> -->
+                </label>
+                <input
+                  id="pin"
+                  type="password"
+                  placeholder="Your Pin"
+                  class="input input-bordered"
+                  required
+                  autocomplete="on"
+                />
+                <i class="absolute top-[44%] right-12 fa-solid fa-key" style="color: #0041ff;"></i>
+                <label class="label">
+                  <a href="#" class="label-text-alt link link-hover font-medium"
+                    >Forgot password?</a
+                  >
+                </label>
+              </div>
+              <div class="form-control mt-6">
+                <button id="login" class="btn btn-primary">Login</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/login.js"></script>
+  </body>
+</html>

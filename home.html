@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo</title>
+    <link rel="shortcut icon" href="payoo.png" type="image/x-icon">
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+
+          <!-- Fontawesome cdn -->
+    <script
+    src="https://kit.fontawesome.com/bbfc4be646.js"
+    crossorigin="anonymous"
+  ></script>
+  <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css"
+  />
+  </head>
+  <body>
+    <main>
+        <section class="flex items-center justify-center h-[100vh] p-12">
+            <div class="border-4 border-blue-600 py-12 rounded-3xl shadow-2xl flex flex-col justify-center items-center ">
+                <div class="w-[30%]">
+                    <img src="payoo.png" alt="">
+                </div>
+                <h1 class="font-black pb-5">WELCOME</h1>
+                <div class="w-full max-w-sm px-7">
+                    <div class="stats bg-primary text-primary-content w-full">
+                        <div class="stat text-center">
+                          <div class="stat-title text-white font-bold">Account Balance</div>
+                          <div id="ac-balance"  class="stat-value">9400</div>
+                          <div class="stat-actions">
+                            <button id="show-add-money" class="btn btn-info text-white">Add Money</button>
+                            <button id="show-cashout" class="btn btn-info text-white">Cashout</button>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div id="add-money-form" class="card bg-base-100 w-full max-w-sm shrink-0">
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label relative">
+                          <!-- <span class="label-text">Mobile Number</span> -->
+                        </label>
+                        <input
+                          id="amount"
+                          type="text"
+                          placeholder="Amount"
+                          class="input input-bordered"
+                          required
+                          autocomplete="on"
+                        />
+                        <i class="absolute top-[23%] right-12 fa-duotone fa-solid fa-wallet" style="--fa-primary-color: #005eff; --fa-secondary-color: #00b3ff;"></i>
+                      </div>
+                      <div class="form-control">
+                        <label class="label relative">
+                          <!-- <span class="label-text">4 Digit Pin</span> -->
+                        </label>
+                        <input
+                          id="pin"
+                          type="password"
+                          placeholder="Your Pin"
+                          class="input input-bordered"
+                          required
+                          autocomplete="on"
+                        />
+                        <i class="absolute top-[49%] right-12 fa-solid fa-key" style="color: #0041ff;"></i>
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="add-money" class="btn btn-primary text-base font-bold">Add Money</button>
+                      </div>
+                    </form>
+                  </div>
+                <div id="cashout-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0">
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label relative">
+                          <!-- <span class="label-text">Mobile Number</span> -->
+                        </label>
+                        <input
+                          id="c-amount"
+                          type="text"
+                          placeholder="Amount"
+                          class="input input-bordered"
+                          required
+                          autocomplete="on"
+                        />
+                        <i class="absolute top-[23%] right-12 fa-duotone fa-solid fa-wallet" style="--fa-primary-color: #005eff; --fa-secondary-color: #00b3ff;"></i>
+                      </div>
+                      <div class="form-control">
+                        <label class="label relative">
+                          <!-- <span class="label-text">4 Digit Pin</span> -->
+                        </label>
+                        <input
+                          id="c-pin"
+                          type="password"
+                          placeholder="Your Pin"
+                          class="input input-bordered"
+                          required
+                          autocomplete="on"
+                        />
+                        <i class="absolute top-[49%] right-12 fa-solid fa-key" style="color: #0041ff;"></i>
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="cashout-btn" class="btn btn-primary text-base font-bold">Cashout</button>
+                      </div>
+                    </form>
+                  </div>
+              </div>   
+        </section>
+    </main>
+    <script src="js/home.js"></script>
+  </body>
+</html>
