@@ -34,6 +34,13 @@ document.getElementById('cashout-btn')
     if (pin === '1234') {
         const addMoney = parseInt(cashoutAmmount);
         const balance = parseInt(currentBalance);
+        if(addMoney>balance){
+          const p = document.createElement('p');
+          p.classList.add('text-red-500','z-10','top-[63px]','absolute');
+          p.innerText = `insufficient balance`;
+          document.getElementById('ib').appendChild(p);
+          return;
+        }
         const newBalance = balance - addMoney;
 
         document.getElementById('ac-balance').innerText = newBalance;
